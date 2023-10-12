@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <title>Chart Generator</title>
+</head>
+<body>
+    <div class="options-container">
+        <label for="chartType">Chart Type:</label>
+        <select id="chartType">
+            <option value="bar">Bar Chart</option>
+            <option value="line">Line Chart</option>
+            <option value="radar">Radar Chart</option>
+        </select>
+
+        <label for="chartTitle">Chart Title:</label>
+        <input type="text" id="chartTitle">
+
+        <label for="labelNames">Label Names:</label>
+        <textarea id="labelNames" rows="2" placeholder="Enter label names as comma-separated values"></textarea>
+
+        <label for="dataInput">Data Input:</label>
+        <textarea id="dataInput" rows="4" placeholder="Enter data as comma-separated values"></textarea>
+
+        <label for="excelInput">Upload Excel File:</label>
+        <input type="file" id="excelInput" accept=".xls, .xlsx">
+
+        <button id="generateChart">Generate Chart</button>
+        <button id="downloadChart">Download Chart</button>
+    </div>
+
+    <div class="chart-container">
+        <canvas id="myChart" width="400" height="400"></canvas>
+    </div>
+</body>
+</html>
